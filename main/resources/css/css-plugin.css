@@ -1,0 +1,7 @@
+.ghx-key {
+	font-size: 10px;
+}
+
+.ghx-issue[data-issue-key|="TK"] * .ghx-summary {
+	font-size: 10px;
+}

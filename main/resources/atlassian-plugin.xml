@@ -1,0 +1,25 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="css-plugin"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="css-plugin-resources" name="csspluginWebResources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>  
+
+        <!--
+        <resource type="download" name="css-plugin.css" location="css/css-plugin.css"/>-->
+       <resource name="css-plugin.js" type="download" location="css-plugin.js"/>
+       <context>atl.general</context>
+
+        <context>atl-general</context>
+    </web-resource>
+    
+</atlassian-plugin>
